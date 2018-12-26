@@ -2,8 +2,8 @@
 <tileset name="ptmk-64x64" tilewidth="64" tileheight="64" tilecount="256" columns="16">
  <image source="ptmktiles-64x64.png" width="1024" height="1024"/>
  <terraintypes>
-  <terrain name="Wood Wall on Nothing" tile="-1"/>
-  <terrain name="Nothing on Wood Wall" tile="-1"/>
+  <terrain name="Dig Sharp Wall" tile="-1"/>
+  <terrain name="Build Sharp Wall" tile="-1"/>
  </terraintypes>
  <tile id="0" type="Cave, Natural on Nothing\"/>
  <tile id="1" type="Cave, Natural on Nothing\" terrain="0,0,0,1"/>
@@ -26,8 +26,8 @@
  <tile id="48" terrain="1,0,1,0"/>
  <tile id="49" terrain="0,0,0,0"/>
  <tile id="50" terrain="0,1,0,1"/>
- <tile id="52" terrain="1,1,1,1"/>
  <tile id="64" terrain="1,0,1,1"/>
  <tile id="65" terrain="0,0,1,1"/>
  <tile id="66" terrain="0,1,1,1"/>
+ <tile id="80" terrain="1,1,1,1"/>
 </tileset>
