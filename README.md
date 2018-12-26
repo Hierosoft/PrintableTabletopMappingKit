@@ -3,7 +3,7 @@ Create maps for Pen&amp;Paper RPGs or other tabletop games, in economical or fan
 ![screenshot](https://github.com/poikilos/PrintableTabletopMappingKit/raw/master/screenshot.png)
 
 ## Use
-This tileset differs from most, in that it is "subtractive." That means that you should have a ground texture and/or grid. That can be done using the following directions. Another difference is that the grid is 2x2 Tiled units--the dotted black lines should be ignored, and the grid texture (described below) should be used for in-game measurements. This allows for drawing most helpful shapes; it also means that the paint brush is 1x1 on the synthetic grid (which represents 5x5ft in most tabletop games).
+This tileset differs from most, in that it is "subtractive." That means that you should have a ground texture and/or grid. That can be done using the following directions. Another difference is that the "synthetic grid" (gray in picture) is 2x2 Tiled Map Editor units--grid mode (the dotted black lines) should be turned off when using this, and the grid texture (described below) should be used for in-game measurements. The synthetic grid allows for drawing most helpful shapes; it also means that the paint brush is 1x1 in synthetic grid units. These grid squares would represent 5x5ft in most tabletop games.
 * Install Tiled Map Editor
 * Open Tiled Map Editor
 * New Map
