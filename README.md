@@ -1,5 +1,5 @@
 # Printable Tabletop Mapping Kit
-Create maps for Pen&amp;Paper RPGs or other tabletop games, in economical or fancy styles. This is the tileset (tsx file) and source files for creating the tileset. The tileset is meant to be used in [Tiled Map Editor](https://www.mapeditor.org/).
+Create maps for Pen&amp;Paper RPGs or other tabletop games, in an economical style. For fancy output, import your own ground texture. This project contains a tileset (tsx file) and source files for creating the tileset. The tileset is meant to be used in [Tiled Map Editor](https://www.mapeditor.org/).
 ![screenshot](https://github.com/poikilos/PrintableTabletopMappingKit/raw/master/screenshot.png)
 
 ## Use
