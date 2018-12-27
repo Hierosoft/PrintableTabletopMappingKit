@@ -1,4 +1,4 @@
-# PrintableTabletopMappingKit
+# Printable Tabletop Mapping Kit
 Create maps for Pen&amp;Paper RPGs or other tabletop games, in economical or fancy styles. This is the tileset (tsx file) and source files for creating the tileset. The tileset is meant to be used in [Tiled Map Editor](https://www.mapeditor.org/).
 ![screenshot](https://github.com/poikilos/PrintableTabletopMappingKit/raw/master/screenshot.png)
 
@@ -54,7 +54,7 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
 
 ## Developer Notes
 ### Why Alpha is Inverse of Normal Tilesets
-I tried setting up subtractive painting in Tiled Map Editor using the normal way of doing tilesets (see terrain blocks in Liberated Pixel Cup project tilesets such as [LPC Terrain Repack](https://opengameart.org/content/lpc-terrain-repack)), but that did not work, even with various hacky setups in the terrain designer. I had to design all terrains with alpha opposite of normal for this to work. I could have used a ground texture with walls (see pits in LPC Terrain Repack), but then the grid lines would have to be on them, making them non-optional. This method seems like the only way to make it behave how I want.
+I tried setting up subtractive painting in Tiled Map Editor using the normal way of doing tilesets (see terrain blocks in Liberated Pixel Cup project tilesets such as [LPC Terrain Repack](https://opengameart.org/content/lpc-terrain-repack)), but that did not work, even with various hacky setups in the terrain designer. I had to design all terrains with alpha opposite of normal for this to work. I could have used a ground texture with walls (see pits in LPC Terrain Repack), but then the grid lines would have to be on them, making them non-optional. The inverted setup I created for Printable Tabletop Mapping Kit seems like the only way to make it behave how I want.
 
 ## License
 (Author: Jake Gustafson aka poikilos)
