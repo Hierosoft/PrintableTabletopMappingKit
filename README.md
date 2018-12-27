@@ -53,8 +53,8 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
   * Far fewer tiles may be needed in tileset if each tile was made up of 9 third-tile graphics (grid spacing would have to be 3x3 Tiled Map Editor units)
 
 ## Developer Notes
-### Why Alpha is Inverse of Normal Tilesets
-I tried setting up subtractive painting in Tiled Map Editor using the normal way of doing tilesets (see terrain blocks in Liberated Pixel Cup project tilesets such as [LPC Terrain Repack](https://opengameart.org/content/lpc-terrain-repack)), but that did not work, even with various hacky setups in the terrain designer. I had to design all terrains with alpha opposite of normal for this to work. I could have used a ground texture with walls (see pits in LPC Terrain Repack), but then the grid lines would have to be on them, making them non-optional. The inverted setup I created for Printable Tabletop Mapping Kit seems like the only way to make it behave how I want.
+### Why Tileset is Inverse of Standard
+I tried setting up subtractive painting in Tiled Map Editor using the normal way of doing tilesets (see terrain blocks using the Liberated Pixel Cup standard such as [LPC Terrain Repack](https://opengameart.org/content/lpc-terrain-repack)), but that did not work, even with various hacky setups in Tiled's terrain designer. I had to design all terrains with alpha opposite of normal for this to work. I could have used a ground texture with walls (see pits in LPC Terrain Repack), but then the grid would have to be embedded in every tile, making lines non-optional and tiles difficult to maintain. The inverted setup I created for Printable Tabletop Mapping Kit seems like the only way to make drawing this style of map in Tiled this easy for the user.
 
 ## License
 (Author: Jake Gustafson aka poikilos)
