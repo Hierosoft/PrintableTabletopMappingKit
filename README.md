@@ -39,7 +39,7 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
   * click File, "Export As Image,"
   * Choose a location and name (make sure "Draw Tile Grid" is unchecked)
   * Normally you can uncheck "Use current zoom level," but if you zoomed for screen use, (such as for display on screens, or if you are printing smaller than 1 grid square per inch) you can check it if you have zoomed out to an acceptable scale (for example, if you use a 64x64 tileset, the synthetic grid lines are spaced by 128px--so if you plan to scale it down later so there are 6 grid lines per inch, you can zoom to 50% with this option checked you still get 384 dpi and a much lower file size than if unchecked).
-  * Open the image you saved in a different program (IrfanView recommended for Windows, , then print using that program.
+  * Open the image you saved in a different program (IrfanView recommended for Windows, Gwenview or Okular for Linux--Ctrl P then Properties to see size), then print using that program.
 
 ### Tips
 #### Using the ptmk tileset with Tiled Map Editor
@@ -49,8 +49,7 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
 * If edges of wall become disconnected, obscure then redraw them using the Build and Dig terrains (neither actual Erase tool nor Stamp tool are needed, but you can use Stamp if you need different types of corners on the same map). If you still have trouble, make sure the obscured area is painted using the matching terrain (for example, for Caves, make sure background is the "Build Cave" terrain and then you can successfully draw with the "Dig Cave" terrain).
 
 ## Known Issues
-* Fewer tiles would be needed in tileset if each tile was made up of 4 quarter-tile graphics (grid spacing would have to be 2x2 Tiled Map Editor units)
-  * Far fewer tiles may be needed in tileset if each tile was made up of 9 third-tile graphics (grid spacing would have to be 3x3 Tiled Map Editor units)
+* Include natural-looking tiles for printing fancy maps
 
 ## Developer Notes
 ### Why Tileset is Inverse of Standard
