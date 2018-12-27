@@ -10,7 +10,7 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
 * Open File, choose ptmk-64x64.tsx
 * Go back to map tab (the .tmx file)
 * Make sure the "Layers" tab is selected on the right
-* IF you ever mess up your user interface (lose panels I describe in this guide), reset all your Tiled settings by deleting (/.config/mapeditor.org/ on Linux or macOS)
+* IF you ever mess up your user interface (lose panels I describe in this guide), reset all your Tiled settings by deleting (/.config/mapeditor.org/tiled.conf on Linux or macOS; On Windows, the may be in %APPDATA%)
 * Click "View," "Show Grid" unless it is already unchecked.
 * Double-click the layer name and change it to **"Ground"**
   * In the "Tilesets" tab, choose a plain white square for economical printing, or choose any terrain texture you want. This will be the texture that "shows through" when you cut out the area where characters can walk.
@@ -20,6 +20,7 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
 * Click the "Tilesets" tab at bottom right
   * Drag to select the grid (2x2 area from ID 3 to ID 20)
   * Fill the entire "Grid" layer, by choosing Bucket Fill Tool (F) then clicking the background
+    (if you do not see the grid lines, try zooming in)
   * Click the unlocked symbol by "Grid" layer to change it to locked.
 * In the menu bar click Layer, New, Tile Layer, and type **"Walls"** to name it.
   * In "Terrain" tab, choose the "Build" terrain for the terrain type you want, such as "Build Sharp Wall"
@@ -45,12 +46,15 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
 * most passageways for tabletop RPGs, especially where battles will occur, should be at least 2 grid marks (10ft) wide, to allow creatures to move around each other.
 * To draw 1x1 (.5x.5 synthetic grid squares) instead of 2x2 (1x1 synthetic grid squares) with the Terrain Brush, hold Ctrl key. Name layers to help you keep track later (recommended: put "offset" in the name of offset layers)
 * Objects made of "Build" or "Dig" terrain that are not just a plain square but fewer than 2 squares in any dimension must be constructed piece by piece out of corners and walls using the "Tilesets" tab.
-* If edges of wall become disconnected, obscure then redraw them using the Build and Dig terrains (neither actual Erase tool nor Stamp tool are needed). If you still have trouble, make sure the obscured area is painted using the matching terrain (for example, for Caves, make sure background is the "Build Cave" terrain and then you can successfully draw with the "Dig Cave" terrain)
+* If edges of wall become disconnected, obscure then redraw them using the Build and Dig terrains (neither actual Erase tool nor Stamp tool are needed, but you can use Stamp if you need different types of corners on the same map). If you still have trouble, make sure the obscured area is painted using the matching terrain (for example, for Caves, make sure background is the "Build Cave" terrain and then you can successfully draw with the "Dig Cave" terrain).
 
 ## Known Issues
 * Fewer tiles would be needed in tileset if each tile was made up of 4 quarter-tile graphics (grid spacing would have to be 2x2 Tiled Map Editor units)
   * Far fewer tiles may be needed in tileset if each tile was made up of 9 third-tile graphics (grid spacing would have to be 3x3 Tiled Map Editor units)
 
+## Developer Notes
+### Why Alpha is Inverse of Normal Tilesets
+I tried setting up subtractive painting in Tiled Map Editor using the normal way of doing tilesets (see terrain blocks in Liberated Pixel Cup project tilesets such as [LPC Terrain Repack](https://opengameart.org/content/lpc-terrain-repack)), but that did not work, even with various hacky setups in the terrain designer. I had to design all terrains with alpha opposite of normal for this to work. I could have used a ground texture with walls (see pits in LPC Terrain Repack), but then the grid lines would have to be on them, making them non-optional. This method seems like the only way to make it behave how I want.
 
 ## License
 (Author: Jake Gustafson aka poikilos)

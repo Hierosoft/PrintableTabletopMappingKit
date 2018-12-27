@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="14.2222in" height="14.2222in"
+     viewBox="0 0 1024 1024">
+  <path id="rounded corner STENCIL"
+        fill="none" stroke="black" stroke-width="1"
+        d="M 352.00,576.00
+           C 352.00,592.00 352.00,624.00 352.00,640.00
+             352.00,658.75 365.88,672.00 384.00,672.00
+             400.00,672.00 432.00,672.00 448.00,672.00
+             440.24,664.24 362.58,574.52 352.00,576.00 Z" />
+</svg>
