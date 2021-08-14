@@ -24,8 +24,7 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
   * Click the unlocked symbol by "Grid" layer to change it to locked.
 * In the menu bar click Layer, New, Tile Layer, and type **"Walls"** to name it.
   * In "Terrain" tab, choose the "Build" terrain for the terrain type you want, such as "Build Sharp Wall" or "Build Cave" (make a separate layer for each so that the corners smooth automatically).
-  * ~~Fill the entire layer, by choosing Bucket Fill Tool (F) then clicking the background
-  if this doesn't work, you may need to~~ Manually choose the wall material, which is the bottom left tile of the terrain, such as ID 85 for cave, or ID 80 for sharp wall--whatever is below the bottom right cutout of the tileset region.
+  * (Don't: Fill the entire layer, by choosing Bucket Fill Tool (F) then clicking the background) Manually choose the wall material, which is the bottom left tile of the terrain, such as ID 85 for cave, or ID 80 for sharp wall--whatever is below the bottom right cutout of the tileset region (View the ID by opening the tileset in a different tab, but select the tile using the map's tab).
 * Click the "Terrains" tab at the bottom right
   * Choose a "Dig" terrain (or the matching "Build" to undo), and paint as needed to make your level
 * To make exits (leave open ended area without black outline), go to Tilesets tab and click the plain white color (or whatever tile matches the "Build" terrain)
@@ -49,7 +48,7 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
 * If edges of wall become disconnected, obscure then redraw them using the Build and Dig terrains (neither actual Erase tool nor Stamp tool are needed, but you can use Stamp if you need different types of corners on the same map). If you still have trouble, make sure the obscured area is painted using the matching terrain (for example, for Caves, make sure background is the "Build Cave" terrain and then you can successfully draw with the "Dig Cave" terrain).
 
 ## Known Issues
-* Include natural-looking tiles for printing fancy maps
+See [github.com/poikilos/PrintableTabletopMappingKit/issues](https://github.com/poikilos/PrintableTabletopMappingKit/issues).
 
 ## Developer Notes
 ### Why Tileset is Inverse of Standard
