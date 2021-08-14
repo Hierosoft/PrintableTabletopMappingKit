@@ -3,7 +3,7 @@ Create maps for Pen&amp;Paper RPGs or other tabletop games, in an economical sty
 ![screenshot](https://github.com/poikilos/PrintableTabletopMappingKit/raw/master/screenshot.png)
 
 ## Use
-This tileset differs from most, in that it is "subtractive." The "Build" terrains covers everything but the walkable area. The "Dig" terrains. That means that you should have a ground texture and/or grid. That can be done using the following directions. Another difference is that the "synthetic grid" (gray in picture) is 2x2 Tiled Map Editor units--grid mode (the dotted black lines) should be turned off when using this, and the grid texture (described below) should be used for in-game measurements. The synthetic grid allows for drawing most helpful shapes; it also means that the paint brush is 1x1 in synthetic grid units. These grid squares would represent 5x5ft in most tabletop games. Summary of steps below: fill a layer with ground texture, fill another layer with double-spaced synthetic grid lines, fill another layer with "Build" terrain, then use "Dig" terrain to draw walkable areas. Place props on a 4th layer (more if offset is needed). 
+This tileset differs from most, in that it is "subtractive." The "Build" terrains covers everything but the walkable area. The "Dig" terrains. That means that you should have a ground texture and/or grid. That can be done using the following directions. Another difference is that the "synthetic grid" (gray in picture) is 2x2 Tiled Map Editor units--grid mode (the dotted black lines) should be turned off when using this, and the grid texture (described below) should be used for in-game measurements. The synthetic grid allows for drawing most helpful shapes; it also means that the paint brush is 1x1 in synthetic grid units. These grid squares would represent 5x5ft in most tabletop games. Summary of steps below: fill a layer with ground texture, fill another layer with double-spaced synthetic grid lines, fill another layer with "Build" terrain, then use "Dig" terrain to draw walkable areas. Place props on a 4th layer (more if offset is needed).
 * Install Tiled Map Editor
 * Open Tiled Map Editor
 * New Map
@@ -11,7 +11,7 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
 * Go back to map tab (the .tmx file)
 * Make sure the "Layers" tab is selected on the right
 * IF you ever mess up your user interface (lose panels I describe in this guide), reset all your Tiled settings by deleting (/.config/mapeditor.org/tiled.conf on Linux or macOS; On Windows, the may be in %APPDATA%)
-* Click "View," "Show Grid" unless it is already unchecked.
+* Turn off the grid since the kit makes a special 2 unit per line grid that allows automatic cornering (Click "View," "Show Grid" unless it is already unchecked).
 * Double-click the layer name and change it to **"Ground"**
   * In the "Tilesets" tab, choose a plain white square for economical printing, or choose any terrain texture you want. This will be the texture that "shows through" when you cut out the area where characters can walk.
   * Fill the entire "Ground" layer, by choosing Bucket Fill Tool (F) then clicking the background
@@ -23,9 +23,9 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
     (if you do not see the grid lines, try zooming in)
   * Click the unlocked symbol by "Grid" layer to change it to locked.
 * In the menu bar click Layer, New, Tile Layer, and type **"Walls"** to name it.
-  * In "Terrain" tab, choose the "Build" terrain for the terrain type you want, such as "Build Sharp Wall"
-  * Fill the entire layer, by choosing Bucket Fill Tool (F) then clicking the background
-  (if this doesn't work, you may need to manually choose the wall material, which is the bottom left tile of the terrain, such as ID 85 for cave, or ID 80 for sharp wall)
+  * In "Terrain" tab, choose the "Build" terrain for the terrain type you want, such as "Build Sharp Wall" or "Build Cave" (make a separate layer for each so that the corners smooth automatically).
+  * ~~Fill the entire layer, by choosing Bucket Fill Tool (F) then clicking the background
+  if this doesn't work, you may need to~~ Manually choose the wall material, which is the bottom left tile of the terrain, such as ID 85 for cave, or ID 80 for sharp wall--whatever is below the bottom right cutout of the tileset region.
 * Click the "Terrains" tab at the bottom right
   * Choose a "Dig" terrain (or the matching "Build" to undo), and paint as needed to make your level
 * To make exits (leave open ended area without black outline), go to Tilesets tab and click the plain white color (or whatever tile matches the "Build" terrain)
