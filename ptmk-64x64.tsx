@@ -1,64 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="ptmk-64x64" tilewidth="64" tileheight="64" tilecount="256" columns="16">
+<tileset version="1.5" tiledversion="1.7.2" name="ptmk-64x64" tilewidth="64" tileheight="64" tilecount="256" columns="16">
  <image source="ptmktiles-64x64.png" width="1024" height="1024"/>
- <terraintypes>
-  <terrain name="Dig Angled Wall" tile="-1"/>
-  <terrain name="Build Angled Wall" tile="-1"/>
-  <terrain name="Dig Cave" tile="-1"/>
-  <terrain name="Build Cave" tile="-1"/>
-  <terrain name="Dig Straight Wall" tile="0"/>
-  <terrain name="Build Straight Wall" tile="0"/>
- </terraintypes>
  <tile id="0" type="Cave, Natural on Nothing\"/>
- <tile id="1" type="Cave, Natural on Nothing\" terrain="0,0,0,1"/>
- <tile id="2" type="Cave, Natural on Nothing\" terrain="0,0,1,0"/>
+ <tile id="1" type="Cave, Natural on Nothing\"/>
+ <tile id="2" type="Cave, Natural on Nothing\"/>
  <tile id="3" type="Nothing on Cave, Natural"/>
  <tile id="4" type="Nothing on Cave, Natural"/>
  <tile id="5" type="Nothing on Cave, Natural"/>
- <tile id="6" terrain="2,2,2,3"/>
- <tile id="7" terrain="2,2,3,2"/>
  <tile id="16" type="Cave, Natural on Nothing\"/>
- <tile id="17" type="Cave, Natural on Nothing\" terrain="0,1,0,0"/>
- <tile id="18" type="Cave, Natural on Nothing\" terrain="1,0,0,0"/>
+ <tile id="17" type="Cave, Natural on Nothing\"/>
+ <tile id="18" type="Cave, Natural on Nothing\"/>
  <tile id="19" type="Nothing on Cave, Natural"/>
  <tile id="20" type="Nothing on Cave, Natural"/>
  <tile id="21" type="Nothing on Cave, Natural"/>
- <tile id="22" terrain="2,3,2,2"/>
- <tile id="23" terrain="3,2,2,2"/>
- <tile id="32" type="Cave, Natural on Nothing\" terrain="1,1,1,0"/>
- <tile id="33" type="Cave, Natural on Nothing\" terrain="1,1,0,0"/>
- <tile id="34" type="Cave, Natural on Nothing\" terrain="1,1,0,1"/>
+ <tile id="32" type="Cave, Natural on Nothing\"/>
+ <tile id="33" type="Cave, Natural on Nothing\"/>
+ <tile id="34" type="Cave, Natural on Nothing\"/>
  <tile id="35" type="Nothing on Cave, Natural"/>
  <tile id="36" type="Nothing on Cave, Natural"/>
- <tile id="37" type="Nothing on Cave, Natural" terrain="3,3,3,2"/>
- <tile id="38" terrain="3,3,2,2"/>
- <tile id="39" terrain="3,3,2,3"/>
- <tile id="48" terrain="1,0,1,0"/>
- <tile id="49" terrain="0,0,0,0"/>
- <tile id="50" terrain="0,1,0,1"/>
- <tile id="53" terrain="3,2,3,2"/>
- <tile id="54" terrain="2,2,2,2"/>
- <tile id="55" terrain="2,3,2,3"/>
- <tile id="64" terrain="1,0,1,1"/>
- <tile id="65" terrain="0,0,1,1"/>
- <tile id="66" terrain="0,1,1,1"/>
- <tile id="69" terrain="3,2,3,3"/>
- <tile id="70" terrain="2,2,3,3"/>
- <tile id="71" terrain="2,3,3,3"/>
- <tile id="80" terrain="1,1,1,1"/>
- <tile id="85" terrain="3,3,3,3"/>
- <tile id="97" terrain="4,4,4,5"/>
- <tile id="98" terrain="4,4,5,4"/>
- <tile id="113" terrain="4,5,4,4"/>
- <tile id="114" terrain="5,4,4,4"/>
- <tile id="128" terrain="5,5,5,4"/>
- <tile id="129" terrain="5,5,4,4"/>
- <tile id="130" terrain="5,5,4,5"/>
- <tile id="144" terrain="5,4,5,4"/>
- <tile id="145" terrain="4,4,4,4"/>
- <tile id="146" terrain="4,5,4,5"/>
- <tile id="160" terrain="5,4,5,5"/>
- <tile id="161" terrain="4,4,5,5"/>
- <tile id="162" terrain="4,5,5,5"/>
- <tile id="176" terrain="5,5,5,5"/>
+ <tile id="37" type="Nothing on Cave, Natural"/>
+ <wangsets>
+  <wangset name="Terrains" type="corner" tile="-1">
+   <wangcolor name="Dig Angled Wall" color="#ff0000" tile="-1" probability="1"/>
+   <wangcolor name="Build Angled Wall" color="#00ff00" tile="-1" probability="1"/>
+   <wangcolor name="Dig Cave" color="#0000ff" tile="-1" probability="1"/>
+   <wangcolor name="Build Cave" color="#ff7700" tile="-1" probability="1"/>
+   <wangcolor name="Dig Straight Wall" color="#00e9ff" tile="0" probability="1"/>
+   <wangcolor name="Build Straight Wall" color="#ff00d8" tile="0" probability="1"/>
+   <wangcolor name="Dig Rounded Wall" color="#ffff00" tile="-1" probability="1"/>
+   <wangcolor name="Build Rounded Wall" color="#a000ff" tile="-1" probability="1"/>
+   <wangtile tileid="1" wangid="0,1,0,2,0,1,0,1"/>
+   <wangtile tileid="2" wangid="0,1,0,1,0,2,0,1"/>
+   <wangtile tileid="6" wangid="0,3,0,4,0,3,0,3"/>
+   <wangtile tileid="7" wangid="0,3,0,3,0,4,0,3"/>
+   <wangtile tileid="17" wangid="0,2,0,1,0,1,0,1"/>
+   <wangtile tileid="18" wangid="0,1,0,1,0,1,0,2"/>
+   <wangtile tileid="22" wangid="0,4,0,3,0,3,0,3"/>
+   <wangtile tileid="23" wangid="0,3,0,3,0,3,0,4"/>
+   <wangtile tileid="32" wangid="0,2,0,1,0,2,0,2"/>
+   <wangtile tileid="33" wangid="0,2,0,1,0,1,0,2"/>
+   <wangtile tileid="34" wangid="0,2,0,2,0,1,0,2"/>
+   <wangtile tileid="37" wangid="0,4,0,3,0,4,0,4"/>
+   <wangtile tileid="38" wangid="0,4,0,3,0,3,0,4"/>
+   <wangtile tileid="39" wangid="0,4,0,4,0,3,0,4"/>
+   <wangtile tileid="48" wangid="0,1,0,1,0,2,0,2"/>
+   <wangtile tileid="49" wangid="0,1,0,1,0,1,0,1"/>
+   <wangtile tileid="50" wangid="0,2,0,2,0,1,0,1"/>
+   <wangtile tileid="53" wangid="0,3,0,3,0,4,0,4"/>
+   <wangtile tileid="54" wangid="0,3,0,3,0,3,0,3"/>
+   <wangtile tileid="55" wangid="0,4,0,4,0,3,0,3"/>
+   <wangtile tileid="64" wangid="0,1,0,2,0,2,0,2"/>
+   <wangtile tileid="65" wangid="0,1,0,2,0,2,0,1"/>
+   <wangtile tileid="66" wangid="0,2,0,2,0,2,0,1"/>
+   <wangtile tileid="69" wangid="0,3,0,4,0,4,0,4"/>
+   <wangtile tileid="70" wangid="0,3,0,4,0,4,0,3"/>
+   <wangtile tileid="71" wangid="0,4,0,4,0,4,0,3"/>
+   <wangtile tileid="80" wangid="0,2,0,2,0,2,0,2"/>
+   <wangtile tileid="85" wangid="0,4,0,4,0,4,0,4"/>
+   <wangtile tileid="97" wangid="0,5,0,6,0,5,0,5"/>
+   <wangtile tileid="98" wangid="0,5,0,5,0,6,0,5"/>
+   <wangtile tileid="102" wangid="0,7,0,8,0,7,0,7"/>
+   <wangtile tileid="103" wangid="0,7,0,7,0,8,0,7"/>
+   <wangtile tileid="113" wangid="0,6,0,5,0,5,0,5"/>
+   <wangtile tileid="114" wangid="0,5,0,5,0,5,0,6"/>
+   <wangtile tileid="118" wangid="0,8,0,7,0,7,0,7"/>
+   <wangtile tileid="119" wangid="0,7,0,7,0,7,0,8"/>
+   <wangtile tileid="128" wangid="0,6,0,5,0,6,0,6"/>
+   <wangtile tileid="129" wangid="0,6,0,5,0,5,0,6"/>
+   <wangtile tileid="130" wangid="0,6,0,6,0,5,0,6"/>
+   <wangtile tileid="133" wangid="0,8,0,7,0,8,0,8"/>
+   <wangtile tileid="134" wangid="0,8,0,7,0,7,0,8"/>
+   <wangtile tileid="135" wangid="0,8,0,8,0,7,0,8"/>
+   <wangtile tileid="144" wangid="0,5,0,5,0,6,0,6"/>
+   <wangtile tileid="145" wangid="0,5,0,5,0,5,0,5"/>
+   <wangtile tileid="146" wangid="0,6,0,6,0,5,0,5"/>
+   <wangtile tileid="149" wangid="0,7,0,7,0,8,0,8"/>
+   <wangtile tileid="150" wangid="0,7,0,7,0,7,0,7"/>
+   <wangtile tileid="151" wangid="0,8,0,8,0,7,0,7"/>
+   <wangtile tileid="160" wangid="0,5,0,6,0,6,0,6"/>
+   <wangtile tileid="161" wangid="0,5,0,6,0,6,0,5"/>
+   <wangtile tileid="162" wangid="0,6,0,6,0,6,0,5"/>
+   <wangtile tileid="165" wangid="0,7,0,8,0,8,0,8"/>
+   <wangtile tileid="166" wangid="0,7,0,8,0,8,0,7"/>
+   <wangtile tileid="167" wangid="0,8,0,8,0,8,0,7"/>
+   <wangtile tileid="176" wangid="0,6,0,6,0,6,0,6"/>
+   <wangtile tileid="181" wangid="0,8,0,8,0,8,0,8"/>
+  </wangset>
+ </wangsets>
 </tileset>
