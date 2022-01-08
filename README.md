@@ -23,10 +23,11 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
     (if you do not see the grid lines, try zooming in)
   * Click the unlocked symbol by "Grid" layer to change it to locked.
 * In the menu bar click Layer, New, Tile Layer, and type **"Walls"** to name it.
-  * In "Terrain" tab, choose the "Build" terrain for the terrain type you want, such as "Build Sharp Wall" or "Build Cave" (make a separate layer for each so that the corners smooth automatically).
-  * (Don't: Fill the entire layer, by choosing Bucket Fill Tool (F) then clicking the background) Manually choose the wall material, which is the bottom left tile of the terrain, such as ID 85 for cave, or ID 80 for sharp wall--whatever is below the bottom right cutout of the tileset region (View the ID by opening the tileset in a different tab, but select the tile using the map's tab).
-* Click the "Terrains" tab at the bottom right
-  * Choose a "Dig" terrain (or the matching "Build" to undo), and paint as needed to make your level
+  * If it is mostly non-walkable, take advantage of a "Dig" terrain. Before using the Dig terrain, fill with the solid white color. It has to the be the solid white tile for that specific terrain: Manually choose the wall material, which is the bottom left tile of the terrain, such as ID 85 for cave, or ID 80 for sharp wall--whatever is below the bottom left cutout of the tileset region (View the ID by opening the tileset in a different tab, but select the tile using the map's tab). Fill the entire layer, by choosing Bucket Fill Tool (F) then clicking the background.
+  * If it is mostly walkable, you can build first. In "Terrain" tab, choose the "Build" terrain for the terrain type you want, such as "Build Sharp Wall" or "Build Cave" (make a separate layer for each so that the corners smooth automatically).
+* Click the "Terrains" tab at the bottom right.
+  * Choose a "Dig" terrain (or the matching "Build" to undo), and paint as needed to make your level.
+    * You may have to zoom in or export to see the lines properly, otherwise it may look glitched (You may not see the continuous black outline of your cuts, which may be as narrow as 1/2 of a grid mark but should still look correct when zoomed in or exported).
 * To make exits (leave open ended area without black outline), go to Tilesets tab and click the plain white color (or whatever tile matches the "Build" terrain)
 * Make a new layer and call it **"Props."** Place any props on this layer so Walls layer doesn't become broken apart.
   * Props (such as circles or squares which can represent pillars or tables) can be chosen in the "Tilesets" tab (for objects larger than 1x1, you can select the whole object at once), and then placed using the Stamp tool.
