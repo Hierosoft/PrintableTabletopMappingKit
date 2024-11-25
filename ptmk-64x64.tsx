@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.5" tiledversion="1.7.2" name="ptmk-64x64" tilewidth="64" tileheight="64" tilecount="256" columns="16">
- <image source="ptmktiles-64x64.png" width="1024" height="1024"/>
+ <image source="ptmktiles+border-64x64.png" width="1024" height="1024"/>
  <tile id="0" type="Cave, Natural on Nothing\"/>
  <tile id="1" type="Cave, Natural on Nothing\"/>
  <tile id="2" type="Cave, Natural on Nothing\"/>

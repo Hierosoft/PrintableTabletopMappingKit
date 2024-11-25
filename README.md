@@ -7,7 +7,11 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
 * Install Tiled Map Editor
 * Open Tiled Map Editor
 * New Map
-* Open File, choose ptmk-64x64.tsx
+  - Set the tile size. Basically, a higher resolution is only necessary if you need **fewer** tiles per inch--if you have a more condensed map, it will use more of the pixels in a smaller area, and you don't need tiles with as many pixels each.
+    For the stats below, "tpi" stands for "tiles per inch":
+    * 64 x 64: Image scales to 9.375/fewer tpi for 600 dpi (4.6875/fewer tpi for 300 dpi)
+    * 128 x128: Image scales to for 4.6875/fewer tpi for 600 dpi (2.34375/fewer tpi for 300 dpi)
+* Open File, choose ptmk-64x64.tsx (or ptmk-128x128.tsx)
 * Go back to map tab (the .tmx file)
 * Make sure the "Layers" tab is selected on the right
 * IF you ever mess up your user interface (lose panels I describe in this guide), reset all your Tiled settings by deleting (/.config/mapeditor.org/tiled.conf on Linux or macOS; On Windows, the may be in %APPDATA%)
