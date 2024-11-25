@@ -11,7 +11,7 @@ This tileset differs from most, in that it is "subtractive." The "Build" terrain
     For the stats below, "tpi" stands for "tiles per inch":
     * 64 x 64: Image scales to 9.375/fewer tpi for 600 dpi (4.6875/fewer tpi for 300 dpi)
     * 128 x128: Image scales to for 4.6875/fewer tpi for 600 dpi (2.34375/fewer tpi for 300 dpi)
-* Open File, choose ptmk-64x64.tsx (or ptmk-128x128.tsx)
+* Open File, choose ptmk+border-64x64.tsx (or ptmk+border-128x128.tsx)
 * Go back to map tab (the .tmx file)
 * Make sure the "Layers" tab is selected on the right
 * IF you ever mess up your user interface (lose panels I describe in this guide), reset all your Tiled settings by deleting (/.config/mapeditor.org/tiled.conf on Linux or macOS; On Windows, the may be in %APPDATA%)
