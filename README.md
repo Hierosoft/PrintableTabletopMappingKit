@@ -2,32 +2,46 @@
 Create maps for Pen&amp;Paper RPGs or other tabletop games, in an economical style. For fancy output, import your own ground texture. This project contains a tileset (tsx file) and source files for creating the tileset. The tileset is meant to be used in [Tiled Map Editor](https://www.mapeditor.org/).
 ![screenshot](https://github.com/poikilos/PrintableTabletopMappingKit/raw/master/screenshot.png)
 
+## Main features
+* Subtractive: Start with entire map filled with wall terrain, then cut a path through the "walls" to show the terrain underneath!
+  - Tint the "Walls" any color (default is white to save ink) using Tiled.
+* Grid is separate: Put any terrain under the grid (tint lines white/black using Tiled)!
+  - Tint the default white terrain any color using tiled.
+* Grid is double size: Cut natural shapes more easily.
+* High dpi for printing:
+  * 100 x 100: 6/fewer tiles per ince results in 600+ dpi (3/fewer tpi for 300 dpi)
+    * Export your own resolution from the svg file using Inkscape!
+      * For printing 1:60 scale tactical grids, 600 tpi is recommended (300x300 version, as 300*16 = 4800px, then res is doubled to 600 px per tile since each grid square is 2 Tiled tiles. Typically you don't need to print at real 1/60 scale in your publication, just print the grid lines to illustrate the scale (such as to help the GM draw it on a battle mat at the real 1/60 scale). You would only need 4800x4800 to print actual-size tactical maps at 600 dpi (2400x2400 for 300 dpi).
+
 ## Use
 This tileset differs from most, in that it is "subtractive." The "Build" terrains covers everything but the walkable area. The "Dig" terrains. That means that you should have a ground texture and/or grid. That can be done using the following directions. Another difference is that the "synthetic grid" (gray in picture) is 2x2 Tiled Map Editor units--grid mode (the dotted black lines) should be turned off when using this, and the grid texture (described below) should be used for in-game measurements. The synthetic grid allows for drawing most helpful shapes; it also means that the paint brush is 1x1 in synthetic grid units. These grid squares would represent 5x5ft in most tabletop games. Summary of steps below: fill a layer with ground texture, fill another layer with double-spaced synthetic grid lines, fill another layer with "Build" terrain, then use "Dig" terrain to draw walkable areas. Place props on a 4th layer (more if offset is needed).
 * Install Tiled Map Editor
 * Open Tiled Map Editor
 * New Map
   - Set the tile size. Basically, a higher resolution is only necessary if you need **fewer** tiles per inch--if you have a more condensed map, it will use more of the pixels in a smaller area, and you don't need tiles with as many pixels each.
-    For the stats below, "tpi" stands for "tiles per inch":
-    * 64 x 64: Image scales to 9.375/fewer tpi for 600 dpi (4.6875/fewer tpi for 300 dpi)
-    * 128 x128: Image scales to for 4.6875/fewer tpi for 600 dpi (2.34375/fewer tpi for 300 dpi)
+    For the stats below, "tpi" stands for "tiles per inch". 100 dpi, 200 dpi, etc are only in borderless form for now but make calculation easier. However, double that for gpi (grid lines per inch) since spacing is 2 tiles.
+    * 100 x 100: 3/fewer tpi results in 600+ dpi (1.5/fewer tpi for 300 dpi)
+      * How: Each tile contains half a grid line spacing, so you have to draw 2 in Tiled to get one grid sqare, or in other words, draw 200 pixels per grid line.
+    * 64 x 64: 4.6875/fewer tpi results in 600+ dpi (2.34375/fewer tpi for 300 dpi)
+    * 128 x128: 2.34375/fewer tpi results in 600+ dpi (1.171875/fewer tpi for 300 dpi)
 * Open File, choose ptmk+border-64x64.tsx (or ptmk+border-128x128.tsx)
 * Go back to map tab (the .tmx file)
 * Make sure the "Layers" tab is selected on the right
-* IF you ever mess up your user interface (lose panels I describe in this guide), reset all your Tiled settings by deleting (/.config/mapeditor.org/tiled.conf on Linux or macOS; On Windows, the may be in %APPDATA%)
+  * IF you ever mess up your user interface (lose panels I describe in this guide), reset all your Tiled settings by deleting (/.config/mapeditor.org/tiled.conf on Linux or macOS; On Windows, the may be in %APPDATA%)
 * Turn off the grid since the kit makes a special 2 unit per line grid that allows automatic cornering (Click "View," "Show Grid" unless it is already unchecked).
 * Double-click the layer name and change it to **"Ground"**
   * In the "Tilesets" tab, choose a plain white square for economical printing, or choose any terrain texture you want. This will be the texture that "shows through" when you cut out the area where characters can walk.
   * Fill the entire "Ground" layer, by choosing Bucket Fill Tool (F) then clicking the background
-  * Click the unlocked symbol by "Ground" layer to change it to locked.
+  * Click the unlocked symbol by "Ground" layer to change it to **locked**.
 * In the menu bar click "Layer," New, Tile Layer, type **"Grid"** to name it.
 * Click the "Tilesets" tab at bottom right
   * Drag to select the grid (2x2 area from ID 3 to ID 20)
   * Fill the entire "Grid" layer, by choosing Bucket Fill Tool (F) then clicking the background
-    (if you do not see the grid lines, try zooming in)
-  * Click the unlocked symbol by "Grid" layer to change it to locked.
+    * If you do not see the grid lines, try zooming in
+    * If filling doesn't correctly create a grid, undo and ensure you select the whole 4x4 area in the tileset before filling.
+  * Click the unlocked symbol by "Grid" layer to change it to **locked**.
 * In the menu bar click Layer, New, Tile Layer, and type **"Walls"** to name it.
-  * If it is mostly non-walkable, take advantage of a "Dig" terrain. Before using the Dig terrain, fill with the solid white color. It has to the be the solid white tile for that specific terrain: Manually choose the wall material, which is the bottom left tile of the terrain, such as ID 85 for cave, or ID 80 for sharp wall--whatever is below the bottom left cutout of the tileset region (View the ID by opening the tileset in a different tab, but select the tile using the map's tab). Fill the entire layer, by choosing Bucket Fill Tool (F) then clicking the background.
+  * If it is mostly non-walkable, take advantage of a "Dig" terrain. Before using the Dig terrain, fill the wall layer with the solid white color. It has to the be the solid white tile for that specific terrain: Manually choose the wall material, which is the bottom left tile of the terrain, such as ID 85 for cave, or ID 80 for sharp wall--whatever is below the bottom left cutout of the tileset region (View the ID by opening the tileset in a different tab, but select the tile using the map's tab). Fill the entire layer, by choosing Bucket Fill Tool (F) then clicking the background.
   * If it is mostly walkable, you can build first. In "Terrain" tab, choose the "Build" terrain for the terrain type you want, such as "Build Sharp Wall" or "Build Cave" (make a separate layer for each so that the corners smooth automatically).
 * Click the "Terrains" tab at the bottom right.
   * Choose a "Dig" terrain (or the matching "Build" to undo), and paint as needed to make your level.
