@@ -5,13 +5,16 @@ Create maps for Pen&amp;Paper RPGs or other tabletop games, in an economical sty
 ## Main features
 * Subtractive: Start with entire map filled with wall terrain, then cut a path through the "walls" to show the terrain underneath!
   - Tint the "Walls" any color (default is white to save ink) using Tiled.
-* Grid is separate: Put any terrain under the grid (tint lines white/black using Tiled)!
-  - Tint the default white terrain any color using tiled.
-* Grid is double size: Cut natural shapes more easily.
-* High dpi for printing:
-  * 100 x 100: 6/fewer tiles per ince results in 600+ dpi (3/fewer tpi for 300 dpi)
-    * Export your own resolution from the svg file using Inkscape!
-      * For printing 1:60 scale tactical grids, 600 tpi is recommended (300x300 version, as 300*16 = 4800px, then res is doubled to 600 px per tile since each grid square is 2 Tiled tiles. Typically you don't need to print at real 1/60 scale in your publication, just print the grid lines to illustrate the scale (such as to help the GM draw it on a battle mat at the real 1/60 scale). You would only need 4800x4800 to print actual-size tactical maps at 600 dpi (2400x2400 for 300 dpi).
+* Grid can be on its own layer: Put any terrain under it.
+  - Tint the grid lines white/black/other color using Tiled Map Editor.
+  - Tint the default white terrain any color using Tiled Map Editor
+  - Draw any type of wall over the grid to cover those parts.
+* Grid is double size: Cut natural shapes more easily and use fewer tiles for creating natural shapes.
+* Export your own resolution from the SVG file using Inkscape!
+* High dpi for printing! However, resolution is typically higher than that even, since a dungeon is typically scaled down to less than 1/60 scale to fit on one page of a book. Examples:
+  * 75 x 75 = 300dpi at 2 "gpi" (grid lines per inch) as in 1/2 of 1/60 scale (1/120 scale). The same tileset becomes 600dpi at 4 gpi (as in 1/4 of 1/60 scale = 1/240 scale), since 4 gpi is 8 tiles per inch (8 * 75 = 600). Such scales typical for fitting a large dungeon on one page of a book.
+  * 150 x 150 = 300dpi at actual size. 4/more tpi (4/more tiles per inch = 2/more grid lines per inch) results in 600+ dpi (2/fewer tpi for 300 dpi). Multiply 150 by 16 tiles, so export at 2400 resolution.
+  * Actual 1/60 scale would have 300x300 tiles: For printing 1:60 scale tactical grids, 300 or 600 dpi is recommended (300x300 version is 600 dpi as in 600 per grid line, so export as 4800px as in 300*16, then res is doubled to 600 px per tile since each grid square is 2 Tiled tiles. Typically you don't need to print at real 1/60 scale in your publication, just print the grid lines to illustrate the scale (such as to help the GM draw it on a battle mat at the real 1/60 scale). You would only need 4800x4800 to print actual-size tactical maps at 600 dpi (2400x2400 for 300 dpi).
 
 ## Use
 This tileset differs from most, in that it is "subtractive." The "Build" terrains covers everything but the walkable area. The "Dig" terrains. That means that you should have a ground texture and/or grid. That can be done using the following directions. Another difference is that the "synthetic grid" (gray in picture) is 2x2 Tiled Map Editor units--grid mode (the dotted black lines) should be turned off when using this, and the grid texture (described below) should be used for in-game measurements. The synthetic grid allows for drawing most helpful shapes; it also means that the paint brush is 1x1 in synthetic grid units. These grid squares would represent 5x5ft in most tabletop games. Summary of steps below: fill a layer with ground texture, fill another layer with double-spaced synthetic grid lines, fill another layer with "Build" terrain, then use "Dig" terrain to draw walkable areas. Place props on a 4th layer (more if offset is needed).

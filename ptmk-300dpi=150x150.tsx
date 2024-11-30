@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.5" tiledversion="1.7.2" name="ptmk-100x100" tilewidth="100" tileheight="100" tilecount="256" columns="16">
- <image source="ptmktiles-100x100.png" width="1600" height="1600"/>
+<tileset version="1.5" tiledversion="1.7.2" name="ptmk-300dpi=150x150" tilewidth="150" tileheight="150" tilecount="256" columns="16">
+ <image source="ptmktiles-300dpi=150x150.png" width="2400" height="2400"/>
  <wangsets>
   <wangset name="Walls" type="corner" tile="-1">
    <wangcolor name="Dig Angled Wall" color="#ff0000" tile="-1" probability="1"/>
