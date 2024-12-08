@@ -2,6 +2,10 @@
 Create maps for Pen&amp;Paper RPGs or other tabletop games, in an economical style. For fancy output, import your own ground texture. This project contains a tileset (tsx file) and source files for creating the tileset. The tileset is meant to be used in [Tiled Map Editor](https://www.mapeditor.org/).
 ![screenshot](https://github.com/poikilos/PrintableTabletopMappingKit/raw/master/screenshot.png)
 
+## Related Projects
+* Top Down Dungeon Pack CC0 by Screaming Brain Studios for Tiled: <https://opengameart.org/content/top-down-dungeon-pack>
+* Scribble Dungeons CC0 by Kenney: <https://opengameart.org/content/scribble-dungeons>
+
 ## Main features
 * Subtractive: Start with entire map filled with wall terrain, then cut a path through the "walls" to show the terrain underneath!
   - Tint the "Walls" any color (default is white to save ink) using Tiled.
